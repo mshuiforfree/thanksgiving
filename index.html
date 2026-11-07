@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="感恩節分享｜凡事謝恩——在感謝與哀歌之間，學習依靠神。" />
+  <title>感恩節分享｜凡事謝恩</title>
+
+  <!-- 字體：標題 Noto Serif TC（人文襯線）、正文 Noto Sans TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* ========== 色彩與基本設定 ========== */
+    :root {
+      --cream: #faf6ee;
+      --cream-deep: #f2eadb;
+      --paper: #fffdf8;
+      --orange: #c8692b;        /* 暖橙（強調用） */
+      --orange-dark: #a5531f;   /* 暖橙深色（文字／按鈕，確保對比度） */
+      --orange-soft: #f6e3d2;
+      --olive: #6b7341;
+      --olive-dark: #4f5530;
+      --olive-soft: #e8ead7;
+      --brown: #3e2c20;         /* 深褐（正文） */
+      --brown-mid: #6a5444;
+      --line: #e4d9c6;
+      --shadow: 0 6px 24px rgba(62, 44, 32, 0.08);
+      --radius: 6px;
+      --font-serif: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+      --font-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      --nav-h: 64px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--nav-h) + 16px);
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--brown);
+      font-family: var(--font-sans);
+      font-size: 18px;
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img,
+    iframe {
+      max-width: 100%;
+    }
+
+    a {
+      color: var(--orange-dark);
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* 跳至主要內容（鍵盤使用者） */
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -60px;
+      background: var(--brown);
+      color: var(--paper);
+      padding: 10px 16px;
+      border-radius: var(--radius);
+      z-index: 1000;
+      text-decoration: none;
+      transition: top 0.2s;
+    }
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    /* ========== 頂部導覽 ========== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      background: rgba(250, 246, 238, 0.92);
+      backdrop-filter: saturate(140%) blur(8px);
+      -webkit-backdrop-filter: saturate(140%) blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: var(--brown);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+    }
+
+    .brand svg {
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+    }
+
+    .nav-list {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-list a {
+      display: block;
+      padding: 6px 14px;
+      font-size: 0.95rem;
+      color: var(--brown-mid);
+      text-decoration: none;
+      border-radius: var(--radius);
+      letter-spacing: 0.06em;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .nav-list a:hover {
+      background: var(--cream-deep);
+      color: var(--brown);
+    }
+
+    .nav-list a[aria-current="true"] {
+      color: var(--olive-dark);
+      background: var(--olive-soft);
+    }
+
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: var(--brown);
+      cursor: pointer;
+    }
+
+    .menu-toggle svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    /* ========== 首屏標題 ========== */
+    .hero {
+      position: relative;
+      min-height: 62vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 96px 24px 88px;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      /* 森林晨光相片 + 漸層備用底色（圖片載入失敗時仍然好睇） */
+      background:
+        url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1920&q=70")
+          center 40% / cover no-repeat,
+        linear-gradient(160deg, #e9dcc0 0%, #d8c39b 45%, #9aa06d 100%);
+      transform: scale(1.04);
+    }
+
+    /* 柔和遮罩，確保標題清楚 */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse at 50% 45%, rgba(250, 246, 238, 0.88) 0%, rgba(250, 246, 238, 0.72) 45%, rgba(250, 246, 238, 0.5) 100%),
+        linear-gradient(180deg, rgba(250, 246, 238, 0.2) 0%, rgba(250, 246, 238, 0.9) 100%);
+    }
+
+    /* 陽光光暈 */
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 60vmax;
+      height: 60vmax;
+      z-index: -1;
+      background: radial-gradient(circle, rgba(246, 200, 140, 0.35) 0%, rgba(246, 200, 140, 0) 60%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      text-align: center;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin: 0 0 22px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tag {
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(255, 253, 248, 0.85);
+      color: var(--olive-dark);
+      border: 1px solid rgba(107, 115, 65, 0.3);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: clamp(1.85rem, 4.6vw, 2.75rem);
+      line-height: 1.4;
+      letter-spacing: 0.06em;
+      color: var(--brown);
+    }
+
+    .hero h1 .divider {
+      color: var(--orange);
+      margin: 0 0.15em;
+      font-weight: 500;
+    }
+
+    .hero .subtitle {
+      margin: 18px 0 0;
+      font-family: var(--font-serif);
+      font-size: clamp(1.02rem, 2.2vw, 1.2rem);
+      color: var(--brown-mid);
+      letter-spacing: 0.08em;
+    }
+
+    .hero .meta {
+      margin: 26px 0 0;
+      font-size: 0.9rem;
+      color: var(--brown-mid);
+      letter-spacing: 0.06em;
+    }
+
+    .leaf-mark {
+      display: block;
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 18px;
+    }
+
+    /* ========== 正文 ========== */
+    main {
+      display: block;
+    }
+
+    .article-wrap {
+      max-width: 780px;
+      margin: -40px auto 0;
+      padding: 0 20px 40px;
+      position: relative;
+    }
+
+    .article-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      padding: 64px 64px 56px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 24px;
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      letter-spacing: 0.06em;
+      color: var(--brown);
+    }
+
+    .section-title::before {
+      content: "";
+      width: 4px;
+      height: 1.2em;
+      border-radius: 2px;
+      background: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .article-section + .article-section {
+      margin-top: 56px;
+    }
+
+    .article-card p {
+      margin: 0 0 1.4em;
+    }
+
+    .article-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+    }
+
+    .lead strong,
+    .article-card strong {
+      color: var(--orange-dark);
+      font-weight: 700;
+    }
+
+    .note-inline {
+      color: var(--brown-mid);
+      font-size: 0.95em;
+    }
+
+    /* 引用區塊 */
+    .quote {
+      position: relative;
+      margin: 36px 0;
+      padding: 26px 28px 26px 56px;
+      background: var(--cream);
+      border-left: 3px solid var(--olive);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-family: var(--font-serif);
+      font-size: 1.08rem;
+      line-height: 1.95;
+      color: var(--brown);
+    }
+
+    .quote::before {
+      content: "“";
+      position: absolute;
+      left: 18px;
+      top: 6px;
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--olive);
+      opacity: 0.55;
+      font-family: Georgia, serif;
+    }
+
+    .quote p {
+      margin: 0;
+    }
+
+    /* 分隔線 */
+    .divider-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 56px 0;
+      color: var(--olive);
+      border: 0;
+    }
+
+    .divider-line::before,
+    .divider-line::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      max-width: 160px;
+      background: var(--line);
+    }
+
+    .divider-line svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* 感謝與哀歌對照 */
+    .contrast {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin: 28px 0 32px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contrast li {
+      padding: 22px 22px 20px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--paper);
+      line-height: 1.85;
+    }
+
+    .contrast .thanks {
+      background: var(--orange-soft);
+      border-color: #ecd0b7;
+    }
+
+    .contrast .lament {
+      background: var(--olive-soft);
+      border-color: #d4d7bb;
+    }
+
+    .contrast h3 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 8px;
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      letter-spacing: 0.1em;
+    }
+
+    .contrast .thanks h3 {
+      color: var(--orange-dark);
+    }
+
+    .contrast .lament h3 {
+      color: var(--olive-dark);
+    }
+
+    .contrast h3 svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .contrast p {
+      margin: 0 !important;
+      font-size: 1rem;
+    }
+
+    /* 標註區塊 */
+    .callout {
+      display: flex;
+      gap: 16px;
+      margin: 32px 0;
+      padding: 22px 24px;
+      background: #fbf1e4;
+      border: 1px solid #efd9bf;
+      border-radius: var(--radius);
+    }
+
+    .callout svg {
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+      margin-top: 4px;
+      color: var(--orange-dark);
+    }
+
+    .callout-label {
+      display: block;
+      margin-bottom: 4px;
+      font-family: var(--font-serif);
+      font-weight: 600;
+      color: var(--orange-dark);
+      letter-spacing: 0.08em;
+    }
+
+    .callout p {
+      margin: 0 !important;
+    }
+
+    .thanks-end {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--brown);
+    }
+
+    /* ========== 感恩練習 ========== */
+    .practice {
+      margin-top: 56px;
+      padding: 36px 36px 32px;
+      background: linear-gradient(180deg, #f7f1e4 0%, #f3ecdc 100%);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    .practice .section-title {
+      margin-bottom: 10px;
+    }
+
+    .practice-prompt {
+      margin: 0 0 20px !important;
+      color: var(--brown-mid);
+    }
+
+    .practice label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--brown);
+    }
+
+    .practice textarea {
+      display: block;
+      width: 100%;
+      min-height: 150px;
+      padding: 14px 16px;
+      font: inherit;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--brown);
+      background: var(--paper);
+      border: 1px solid #d6c8b0;
+      border-radius: var(--radius);
+      resize: vertical;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .practice textarea::placeholder {
+      color: #9a8573;
+    }
+
+    .practice textarea:focus {
+      outline: none;
+      border-color: var(--olive);
+      box-shadow: 0 0 0 3px rgba(107, 115, 65, 0.2);
+    }
+
+    .practice-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .char-count {
+      font-size: 0.85rem;
+      color: var(--brown-mid);
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* 按鈕 */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 8px 20px;
+      font: inherit;
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      border-radius: var(--radius);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .btn svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .btn-primary {
+      background: var(--olive-dark);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #3f4426;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--brown);
+      border-color: #cdbda3;
+    }
+
+    .btn-secondary:hover {
+      background: var(--cream-deep);
+    }
+
+    .btn-accent {
+      background: var(--orange-dark);
+      color: #fff;
+    }
+
+    .btn-accent:hover {
+      background: #8c4519;
+    }
+
+    .status {
+      min-height: 1.8em;
+      margin: 14px 0 0 !important;
+      font-size: 0.95rem;
+      color: var(--olive-dark);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .status.show {
+      opacity: 1;
+    }
+
+    .saved-time {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.85rem;
+      color: var(--brown-mid);
+    }
+
+    /* ========== 詩歌 ========== */
+    .song {
+      margin-top: 56px;
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #2b2018;
+      box-shadow: var(--shadow);
+    }
+
+    /* 舊瀏覽器 16:9 備用 */
+    @supports not (aspect-ratio: 16 / 9) {
+      .video-frame {
+        height: 0;
+        padding-top: 56.25%;
+      }
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-caption {
+      margin: 18px 0 0 !important;
+      text-align: center;
+      font-family: var(--font-serif);
+      color: var(--brown-mid);
+      font-size: 1rem;
+    }
+
+    .video-link {
+      display: block;
+      margin-top: 6px;
+      text-align: center;
+      font-size: 0.88rem;
+    }
+
+    /* ========== 頁尾 ========== */
+    .site-footer {
+      max-width: 780px;
+      margin: 24px auto 0;
+      padding: 0 20px 56px;
+    }
+
+    .footer-card {
+      text-align: center;
+      padding: 44px 28px 36px;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-card .blessing {
+      margin: 0 0 24px;
+      font-family: var(--font-serif);
+      font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+      line-height: 1.9;
+      color: var(--brown);
+      letter-spacing: 0.05em;
+    }
+
+    .footer-card .copy-status {
+      min-height: 1.6em;
+      margin: 12px 0 0;
+      font-size: 0.9rem;
+      color: var(--olive-dark);
+    }
+
+    .footer-small {
+      margin: 28px 0 0;
+      font-size: 0.85rem;
+      color: var(--brown-mid);
+      letter-spacing: 0.06em;
+    }
+
+    /* ========== 淡入動畫 ========== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .hero-content > * {
+      animation: fadeUp 0.9s ease both;
+    }
+    .hero-content > *:nth-child(2) { animation-delay: 0.08s; }
+    .hero-content > *:nth-child(3) { animation-delay: 0.16s; }
+    .hero-content > *:nth-child(4) { animation-delay: 0.24s; }
+    .hero-content > *:nth-child(5) { animation-delay: 0.32s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    /* 尊重「減少動態效果」設定 */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    /* ========== 響應式 ========== */
+    /* 平板 */
+    @media (max-width: 900px) {
+      .article-card {
+        padding: 52px 44px 48px;
+      }
+    }
+
+    /* 手機 */
+    @media (max-width: 640px) {
+      body {
+        font-size: 17px;
+        line-height: 1.85;
+      }
+
+      .nav-inner {
+        padding: 0 16px;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .site-nav {
+        position: absolute;
+        top: var(--nav-h);
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 10px 20px rgba(62, 44, 32, 0.06);
+        display: none;
+      }
+
+      .site-nav.open {
+        display: block;
+      }
+
+      .nav-list {
+        flex-direction: column;
+        gap: 2px;
+        padding: 10px 16px 16px;
+      }
+
+      .nav-list a {
+        padding: 12px 14px;
+        font-size: 1rem;
+      }
+
+      .hero {
+        min-height: 52vh;
+        padding: 72px 20px 76px;
+      }
+
+      .article-wrap {
+        padding: 0 12px 32px;
+        margin-top: -32px;
+      }
+
+      .article-card {
+        padding: 38px 22px 36px;
+        border-radius: 8px;
+      }
+
+      .section-title {
+        font-size: 1.25rem;
+      }
+
+      .contrast {
+        grid-template-columns: 1fr;
+      }
+
+      .quote {
+        padding: 22px 20px 22px 46px;
+        font-size: 1.02rem;
+      }
+
+      .quote::before {
+        left: 12px;
+      }
+
+      .callout {
+        padding: 18px;
+        gap: 12px;
+      }
+
+      .practice {
+        padding: 26px 18px 22px;
+      }
+
+      .practice-footer {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-group {
+        width: 100%;
+      }
+
+      .btn-group .btn {
+        flex: 1 1 0;
+      }
+
+      .footer-card {
+        padding: 36px 8px 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#content">跳至主要內容</a>
+
+  <!-- ===== 1. 頂部導覽 ===== -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="感恩分享，返回頁首">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M16 4c-6 5-9 10-9 15a9 9 0 0 0 18 0c0-5-3-10-9-15Z" fill="#c8692b" opacity="0.9"/>
+          <path d="M16 9v19M16 16l-4-3M16 20l4-3" stroke="#fffdf8" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+        </svg>
+        感恩分享
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="開啟導覽選單"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <path class="icon-menu" d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="主要導覽">
+        <ul class="nav-list">
+          <li><a href="#top" data-section="top">文章</a></li>
+          <li><a href="#content" data-section="content">內容</a></li>
+          <li><a href="#song" data-section="song">詩歌</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== 2. 首屏標題 ===== -->
+    <section class="hero" id="top" aria-labelledby="page-title">
+      <div class="hero-bg" role="img" aria-label="陽光穿過森林樹木，灑落柔和晨光"></div>
+
+      <div class="hero-content">
+        <svg class="leaf-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <path d="M24 6c-1.5 3.5-5 5-8 4 1 3-1 6-4 7 3 1 4 4 3 7 3-1 6 0 7 3l2-4 2 4c1-3 4-4 7-3-1-3 0-6 3-7-3-1-5-4-4-7-3 1-6.5-.5-8-4Z" fill="#c8692b" opacity="0.85"/>
+          <path d="M24 16v26" stroke="#6b7341" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+
+        <ul class="tags" aria-label="文章分類">
+          <li class="tag">感恩節</li>
+          <li class="tag">信仰分享</li>
+        </ul>
+
+        <h1 id="page-title">感恩節分享<span class="divider" aria-hidden="true">｜</span><span class="visually-hidden">：</span>凡事謝恩</h1>
+
+        <p class="subtitle">在感謝與哀歌之間，學習依靠神</p>
+
+        <p class="meta">
+          <time datetime="2026-11">2026 年 11 月</time>．感恩月分享
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 3. 正文 ===== -->
+    <div class="article-wrap">
+      <article class="article-card" id="content" aria-labelledby="page-title">
+
+        <section class="article-section reveal" aria-labelledby="s1">
+          <h2 class="section-title" id="s1">凡事謝恩</h2>
+
+          <p class="lead">
+            「<strong>凡事謝恩</strong>」<span class="note-inline">（即喺任何處境中都能夠感謝神）</span>，確實係一件好難嘅事。
+          </p>
+
+          <p>
+            「感謝」背後嘅思想，係睇見人本來一無所有，一切都出於神。
+          </p>
+
+          <blockquote class="quote">
+            <p>過去、現在、將來，都喺神手中。無論處境如何，我哋都可以注目於神，以感恩嘅心去面對。</p>
+          </blockquote>
+        </section>
+
+        <section class="article-section reveal" aria-labelledby="s2">
+          <h2 class="section-title" id="s2">當苦難臨到</h2>
+
+          <p>
+            當人面對傷害與苦難，難免會產生憤怒、悲傷、無奈、痛苦等情緒。此時要「凡事謝恩」就更加困難。
+          </p>
+
+          <p>
+            其實聖經入面經常出現「哀歌」，詩人身處絕境，都會向神傾訴悲傷，甚至提出控訴。
+          </p>
+
+          <p>
+            呢種表達，正正係人在絕境中、覺得自己一無所有時，<strong>緊緊抓住神嘅方式</strong>。
+          </p>
+        </section>
+
+        <div class="divider-line" role="separator" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" focusable="false">
+            <path d="M12 3c-.8 2-2.8 3-4.5 2.5.5 1.8-.6 3.6-2.5 4 1.9.6 2.6 2.4 2 4.2 1.8-.6 3.6.1 4.2 2L12 13l.8 2.7c.6-1.9 2.4-2.6 4.2-2-.6-1.8.1-3.6 2-4.2-1.9-.4-3-2.2-2.5-4C14.8 6 12.8 5 12 3Z" opacity="0.8"/>
+          </svg>
+        </div>
+
+        <section class="article-section reveal" aria-labelledby="s3">
+          <h2 class="section-title" id="s3">在感謝與哀歌中張力</h2>
+
+          <p>「感謝」與「哀歌」，兩者都係指向神：</p>
+
+          <ul class="contrast">
+            <li class="thanks">
+              <h3>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <circle cx="12" cy="12" r="4"/>
+                  <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                </svg>
+                感謝
+              </h3>
+              <p>睇見自己係蒙恩嘅人，確信神嘅善良與慈愛。</p>
+            </li>
+            <li class="lament">
+              <h3>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11Z"/>
+                </svg>
+                哀歌
+              </h3>
+              <p>睇見自己係受苦中嘅人，向神發出疑問，質問祂嘅善良與慈愛。</p>
+            </li>
+          </ul>
+
+          <p>
+            神容許我哋用「感謝」與「哀歌」去回應祂，所以我哋可以活喺呢兩種張力之中。
+          </p>
+
+          <p>
+            願我哋時刻覺察自己嘅狀態，學習喺唔同處境中，都懂得依靠神渡過難關。
+          </p>
+        </section>
+
+        <section class="article-section reveal" aria-labelledby="s4">
+          <h2 class="section-title" id="s4">一齊操練凡事謝恩</h2>
+
+          <div class="callout" role="note" aria-label="感恩月邀請">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect x="3" y="8" width="18" height="13" rx="1.5"/>
+              <path d="M3 12h18M12 8v13M12 8c-1.5-3-5-4-5.5-1.5S9.5 8 12 8Zm0 0c1.5-3 5-4 5.5-1.5S14.5 8 12 8Z"/>
+            </svg>
+            <div>
+              <span class="callout-label">11 月係感恩月</span>
+              <p>願我哋一齊操練「凡事謝恩」。不妨回顧整理一下，覺察神係點樣引領你生活中大大小小嘅事；亦都邀請你同身邊嘅人分享～</p>
+            </div>
+          </div>
+
+          <p class="thanks-end">
+            多謝大家睇到呢度！<span role="img" aria-label="雙手比心">🫶🫶</span>
+          </p>
+        </section>
+
+        <!-- ===== 4. 感恩練習 ===== -->
+        <section class="practice reveal" id="practice" aria-labelledby="practice-title">
+          <h2 class="section-title" id="practice-title">感恩練習</h2>
+          <p class="practice-prompt">今日或呢個月，你留意到神喺生活中點樣引領你？</p>
+
+          <form id="gratitude-form" novalidate>
+            <label for="gratitude-input">我嘅感恩記錄</label>
+            <textarea
+              id="gratitude-input"
+              name="gratitude"
+              maxlength="2000"
+              placeholder="例如：今日喺好攰嘅時候，有朋友傳嚟一句問候……"
+              aria-describedby="char-count practice-hint"
+            ></textarea>
+            <p id="practice-hint" class="visually-hidden">內容只會保存喺你呢部裝置嘅瀏覽器入面，唔會上載。</p>
+
+            <div class="practice-footer">
+              <span class="char-count" id="char-count" aria-live="off">0 / 2000 字</span>
+              <div class="btn-group">
+                <button type="button" class="btn btn-secondary" id="clear-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/>
+                  </svg>
+                  清除
+                </button>
+                <button type="submit" class="btn btn-primary" id="save-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M5 12l4.5 4.5L19 7"/>
+                  </svg>
+                  保存
+                </button>
+              </div>
+            </div>
+
+            <p class="status" id="save-status" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <!-- ===== 5. 詩歌 ===== -->
+        <section class="song reveal" id="song" aria-labelledby="song-title">
+          <h2 class="section-title" id="song-title">與大家分享一首詩歌 <span role="img" aria-label="音符">🎵</span></h2>
+
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/XYHux7yxWzg?rel=0"
+              title="詩歌分享：YouTube 影片播放器"
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <p class="video-caption">願呢首詩歌陪伴你在感恩與哀歌中，在神面前安靜回應。</p>
+          <a class="video-link" href="https://youtu.be/XYHux7yxWzg" target="_blank" rel="noopener noreferrer">
+            喺 YouTube 開啟呢首詩歌<span class="visually-hidden">（會喺新分頁開啟）</span>
+          </a>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <!-- ===== 6. 頁尾 ===== -->
+  <footer class="site-footer" aria-label="頁尾">
+    <div class="footer-card reveal">
+      <p class="blessing">願你在每個處境中，<br />都記得不單靠自己，更依靠神。</p>
+
+      <button type="button" class="btn btn-accent" id="copy-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/>
+          <path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>
+        </svg>
+        複製文章連結
+      </button>
+      <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+
+      <p class="footer-small">感恩分享．<span id="year">2026</span></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      /* ---------- 手機選單 ---------- */
+      var toggle = document.querySelector(".menu-toggle");
+      var nav = document.getElementById("site-nav");
+      var menuPath = toggle.querySelector("path");
+
+      function setMenu(open) {
+        nav.classList.toggle("open", open);
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "關閉導覽選單" : "開啟導覽選單");
+        menuPath.setAttribute("d", open ? "M6 6l12 12M18 6L6 18" : "M4 7h16M4 12h16M4 17h16");
+      }
+
+      toggle.addEventListener("click", function () {
+        setMenu(!nav.classList.contains("open"));
+      });
+
+      nav.addEventListener("click", function (e) {
+        if (e.target.closest("a")) setMenu(false);
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && nav.classList.contains("open")) {
+          setMenu(false);
+          toggle.focus();
+        }
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 640) setMenu(false);
+      });
+
+      /* ---------- 導覽高亮目前章節 ---------- */
+      var navLinks = document.querySelectorAll(".nav-list a");
+      var sections = ["top", "content", "song"].map(function (id) {
+        return document.getElementById(id);
+      });
+
+      function updateActive() {
+        var pos = window.scrollY + window.innerHeight * 0.35;
+        var current = "top";
+        sections.forEach(function (sec) {
+          if (sec && sec.offsetTop <= pos) current = sec.id;
+        });
+        navLinks.forEach(function (a) {
+          if (a.dataset.section === current) a.setAttribute("aria-current", "true");
+          else a.removeAttribute("aria-current");
+        });
+      }
+      window.addEventListener("scroll", updateActive, { passive: true });
+      updateActive();
+
+      /* ---------- 淡入動畫 ---------- */
+      var reveals = document.querySelectorAll(".reveal");
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!reduceMotion && "IntersectionObserver" in window) {
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+        );
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add("is-visible"); });
+      }
+
+      /* ---------- 感恩練習（localStorage） ---------- */
+      var STORAGE_KEY = "gratitude-note-2026";
+      var form = document.getElementById("gratitude-form");
+      var input = document.getElementById("gratitude-input");
+      var status = document.getElementById("save-status");
+      var counter = document.getElementById("char-count");
+      var clearBtn = document.getElementById("clear-btn");
+      var statusTimer;
+
+      function storageAvailable() {
+        try {
+          var t = "__test__";
+          localStorage.setItem(t, t);
+          localStorage.removeItem(t);
+          return true;
+        } catch (e) {
+          return false;
+        }
+      }
+      var canStore = storageAvailable();
+
+      function updateCount() {
+        counter.textContent = input.value.length + " / 2000 字";
+      }
+
+      function showStatus(message, sub) {
+        clearTimeout(statusTimer);
+        status.innerHTML = "";
+        status.appendChild(document.createTextNode(message));
+        if (sub) {
+          var s = document.createElement("span");
+          s.className = "saved-time";
+          s.textContent = sub;
+          status.appendChild(s);
+        }
+        status.classList.add("show");
+        statusTimer = setTimeout(function () {
+          status.classList.remove("show");
+        }, 5000);
+      }
+
+      function formatTime(iso) {
+        try {
+          return new Date(iso).toLocaleString("zh-HK", {
+            year: "numeric", month: "long", day: "numeric",
+            hour: "2-digit", minute: "2-digit"
+          });
+        } catch (e) {
+          return "";
+        }
+      }
+
+      // 載入已保存內容
+      if (canStore) {
+        try {
+          var saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
+          if (saved && saved.text) {
+            input.value = saved.text;
+            status.textContent = "";
+            var s = document.createElement("span");
+            s.className = "saved-time";
+            s.textContent = "上次保存：" + formatTime(saved.time);
+            status.appendChild(s);
+            status.classList.add("show");
+          }
+        } catch (e) { /* 忽略損壞資料 */ }
+      }
+      updateCount();
+      input.addEventListener("input", updateCount);
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var text = input.value.trim();
+
+        if (!text) {
+          showStatus("寫低少少都好，慢慢諗，唔使急。");
+          input.focus();
+          return;
+        }
+        if (!canStore) {
+          showStatus("呢個瀏覽器暫時未能保存內容（可能係私密瀏覽模式）。");
+          return;
+        }
+
+        var now = new Date().toISOString();
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ text: text, time: now }));
+        showStatus("感恩記錄已保存。", "保存時間：" + formatTime(now));
+      });
+
+      clearBtn.addEventListener("click", function () {
+        if (!input.value && !(canStore && localStorage.getItem(STORAGE_KEY))) {
+          showStatus("目前未有任何記錄。");
+          return;
+        }
+        if (!window.confirm("確定要清除呢段感恩記錄嗎？")) return;
+
+        input.value = "";
+        if (canStore) localStorage.removeItem(STORAGE_KEY);
+        updateCount();
+        showStatus("記錄已清除，隨時可以再寫低新嘅感恩。");
+        input.focus();
+      });
+
+      /* ---------- 複製文章連結 ---------- */
+      var copyBtn = document.getElementById("copy-btn");
+      var copyStatus = document.getElementById("copy-status");
+      var copyTimer;
+
+      function fallbackCopy(text) {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (e) {}
+        document.body.removeChild(ta);
+        return ok;
+      }
+
+      function done(ok) {
+        clearTimeout(copyTimer);
+        copyStatus.textContent = ok
+          ? "已複製文章連結，歡迎同身邊嘅人分享～"
+          : "未能自動複製，請直接複製網址列嘅連結。";
+        copyTimer = setTimeout(function () { copyStatus.textContent = ""; }, 4000);
+      }
+
+      copyBtn.addEventListener("click", function () {
+        var url = window.location.href.split("#")[0];
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(url).then(
+            function () { done(true); },
+            function () { done(fallbackCopy(url)); }
+          );
+        } else {
+          done(fallbackCopy(url));
+        }
+      });
+
+      /* ---------- 年份 ---------- */
+      document.getElementById("year").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
